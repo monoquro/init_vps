@@ -33,6 +33,17 @@ vpsの初期設定を行います。
 * security設定をする。
     * ssh loginをenv.ssh_authorized_keysのpub fileに記載されているkeyに制限する。
 
+#### task:anyenv
+
+`fab anyenv`
+
+...envをinstallし、言語環境を準備します。
+* anyenvをinstallし、と其処から以下の言語をinstallする。
+    * pyenv(python3, python2)
+    * rbenv
+    * ndenv(v0.10, 4.4)
+    * jenv(java8, maven)
+
 ## Contribution
 
 ## Licence

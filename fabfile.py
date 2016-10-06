@@ -12,3 +12,11 @@ def setup():
     setup_.server_setup(env)
     setup_.speedup_network_sakura_vps()
   server_setup()
+
+u"""言語install with anyenv `fab anyenv`"""
+import tasks.anyenv as anyenv_
+@task
+def anyenv():
+  def install():
+    anyenv_.install(env)
+  install()
