@@ -7,6 +7,7 @@ u"""nginx install
         * 実行するとpublic_htmlは消され、再度作られる。
 
     ※ envの要求
+    ip           : vps's ip address
     working_user : user name
     working_pwd  : password
     ssh_port     : ssh login port
@@ -20,7 +21,7 @@ def install(env):
       sudo("chkconfig nginx on")
       sudo('echo "server {" >> /etc/nginx/conf.d/custom.conf')
       sudo('echo "    listen 80;" >> /etc/nginx/conf.d/custom.conf')
-      sudo('echo "    server_name 160.16.230.53;" >> /etc/nginx/conf.d/custom.conf')
+      sudo('echo "    server_name %s;" >> /etc/nginx/conf.d/custom.conf' % (env.ip))
       sudo('echo "    location ~ ^/~(.+?)(/.*)?$ {" >> /etc/nginx/conf.d/custom.conf')
       sudo('echo "        alias /home/\\\$1/public_html\\\$2;" >> /etc/nginx/conf.d/custom.conf')
       sudo('echo "        index  index.html index.htm;" >> /etc/nginx/conf.d/custom.conf')
