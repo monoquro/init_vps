@@ -44,6 +44,13 @@ vpsの初期設定を行います。
     * ndenv(v0.10, 4.4)
     * jenv(java8, maven)
 
+#### task:nginx
+
+`fab nginx`
+
+nginxをinstallし、/home/${user}/public_htmlからhtmlを公開する。
+* 実行するとpublic_htmlは消され、再度作られる。
+
 ## Contribution
 
 ## Licence
