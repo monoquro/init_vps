@@ -20,3 +20,11 @@ def anyenv():
   def install():
     anyenv_.install(env)
   install()
+
+u"""nginx install `fab nginx`"""
+import tasks.nginx as nginx_
+@task
+def nginx():
+  def install():
+    nginx_.install(env)
+  install()
