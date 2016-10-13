@@ -23,6 +23,7 @@ sakura vpsを想定し、CentOS6.5の設定を行う。
     working_pwd = ${password}
     ssh_port = ${port}
     ssh_authorized_keys = ${pub file path}
+    cloud9_port = ${cloud9's port}
 
 #### task:setup
 
