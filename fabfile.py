@@ -28,3 +28,11 @@ def nginx():
   def install():
     nginx_.install(env)
   install()
+
+u"""cloud9 install `fab cloud9`"""
+import tasks.cloud9 as cloud9_
+@task
+def cloud9():
+  def install():
+    cloud9_.install(env)
+  install()

@@ -51,6 +51,14 @@ vpsの初期設定を行います。
 nginxをinstallし、/home/${user}/public_htmlからhtmlを公開する。
 * 実行するとpublic_htmlは消され、再度作られる。
 
+#### task:cloud9
+
+`fab cloud9`
+
+cloud9をinstallし、任意のportで公開する。
+* 2度の実行は想定していない。
+    * /etc/rc.localに過剰な設定が追加される。
+
 ## Contribution
 
 ## Licence
